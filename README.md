@@ -87,7 +87,7 @@ C. Mengatur Website
 
 1. Buat halaman Beranda melalui menu Laman → Tambah Laman Baru.
 2. Buat halaman Blog untuk menampilkan daftar artikel.
-3. Buka **Pengaturan → Membaca (Settings → Reading).
+3. Buka Pengaturan → Membaca (Settings → Reading).
 4. Jika ingin menggunakan halaman statis, pilih Beranda sebagai halaman depan dan Blog sebagai halaman pos.
 5. Atur menu navigasi melalui Tampilan → Menu atau pengaturan navigasi yang tersedia pada versi WordPress yang digunakan.
 6. Buat kategori artikel sesuai kebutuhan.
