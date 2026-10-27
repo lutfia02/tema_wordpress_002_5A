@@ -1,0 +1,603 @@
+
+
+/* =========================
+   1. DASAR WEBSITE
+========================= */
+:root {
+    --primary: #174a70;
+    --primary-dark: #103650;
+    --accent: #18a999;
+    --background: #f4f8fb;
+    --surface: #ffffff;
+    --text: #263746;
+    --muted: #718096;
+    --border: #e2eaf0;
+    --radius: 16px;
+    --shadow: 0 8px 28px rgba(23, 74, 112, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================
+   2. HEADER DAN NAVIGASI
+========================= */
+.site-header {
+    position: relative;
+    z-index: 10;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-logo {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: var(--primary);
+    color: white;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.site-logo:hover {
+    color: white;
+}
+
+.site-title {
+    margin: 0;
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.site-description {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.custom-logo {
+    max-width: 180px;
+    max-height: 60px;
+    width: auto;
+}
+
+.primary-navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.primary-navigation li {
+    margin: 0;
+}
+
+.primary-navigation a {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-navigation a:hover,
+.primary-navigation .current-menu-item > a {
+    color: var(--accent);
+}
+
+/* =========================
+   3. HERO HALAMAN DEPAN
+========================= */
+.hero {
+    padding: 76px 0;
+    background:
+        radial-gradient(circle at 85% 15%, #d1f5ef 0, transparent 30%),
+        linear-gradient(135deg, #eaf4fc, #f8fbfd);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 52px;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: #d7f4ee;
+    color: #087e70;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 680px;
+    margin: 20px 0;
+    color: var(--primary-dark);
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.hero p {
+    max-width: 590px;
+    color: #586d7e;
+    font-size: 17px;
+}
+
+.hero-visual {
+    padding: 35px;
+    border: 1px solid #dcebf2;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.hero-icon {
+    font-size: 90px;
+    line-height: 1.3;
+}
+
+.hero-visual h2 {
+    margin: 12px 0 4px;
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.hero-visual p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: var(--primary-dark);
+    color: white;
+}
+
+.button-secondary {
+    margin-left: 8px;
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+/* =========================
+   4. BAGIAN KONTEN
+========================= */
+.section {
+    padding: 64px 0;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    color: var(--primary-dark);
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.3;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.post-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+}
+
+.post-thumbnail {
+    display: block;
+    overflow: hidden;
+    background: #e6eff6;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.post-card-content {
+    padding: 23px;
+}
+
+.post-meta {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.post-card h2,
+.post-card h3 {
+    margin: 10px 0;
+    color: var(--primary-dark);
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.post-card p {
+    color: #657585;
+    font-size: 14px;
+}
+
+.read-more {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.empty-state {
+    padding: 30px;
+    border: 1px dashed #b9cbd9;
+    border-radius: var(--radius);
+    background: white;
+}
+
+/* =========================
+   5. BLOG DAN ARTIKEL
+========================= */
+.page-banner {
+    padding: 42px 0;
+    background: #eaf4fc;
+}
+
+.page-banner h1 {
+    margin: 0;
+    color: var(--primary-dark);
+    font-size: 36px;
+}
+
+.page-banner p {
+    margin-bottom: 0;
+    color: var(--muted);
+}
+
+.content-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: start;
+    gap: 32px;
+}
+
+.content-main {
+    min-width: 0;
+}
+
+.article-content {
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+    overflow-wrap: anywhere;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3 {
+    color: var(--primary-dark);
+    line-height: 1.35;
+}
+
+.article-content .post-title {
+    margin-top: 0;
+    font-size: clamp(30px, 4vw, 42px);
+}
+
+.article-featured-image {
+    margin: 25px 0;
+}
+
+.article-featured-image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.article-body > *:first-child {
+    margin-top: 0;
+}
+
+.article-body > *:last-child {
+    margin-bottom: 0;
+}
+
+.article-body ul,
+.article-body ol {
+    padding-left: 25px;
+}
+
+.article-body blockquote {
+    margin-inline: 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--accent);
+    background: var(--background);
+}
+
+.article-body pre {
+    overflow-x: auto;
+}
+
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.article-body th,
+.article-body td {
+    padding: 10px;
+    border: 1px solid var(--border);
+}
+
+.article-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.sidebar {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+}
+
+.sidebar h2,
+.sidebar h3 {
+    margin-top: 0;
+    color: var(--primary-dark);
+    font-size: 19px;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar .widget {
+    margin-bottom: 28px;
+}
+
+.sidebar .widget:last-child {
+    margin-bottom: 0;
+}
+
+.pagination {
+    margin-top: 35px;
+}
+
+.pagination .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pagination .page-numbers {
+    display: inline-block;
+    padding: 8px 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+}
+
+.pagination .current {
+    background: var(--primary);
+    color: white;
+}
+
+.comments-area {
+    margin-top: 35px;
+}
+
+/* =========================
+   6. FOOTER
+========================= */
+.site-footer {
+    padding: 35px 0;
+    background: var(--primary-dark);
+    color: #d9e7ef;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.site-footer a {
+    color: white;
+}
+
+/* =========================
+   7. RESPONSIVE
+========================= */
+@media (max-width: 850px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-visual {
+        max-width: 520px;
+    }
+
+    .post-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+    .header-inner {
+        flex-wrap: wrap;
+        padding: 16px 0;
+    }
+
+    .primary-navigation ul {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero-visual {
+        padding: 25px 18px;
+    }
+
+    .section {
+        padding: 45px 0;
+    }
+
+    .article-content {
+        padding: 22px 18px;
+    }
+
+    .page-banner h1 {
+        font-size: 29px;
+    }
+
+    .button {
+        margin: 5px 4px 5px 0;
+    }
+
+    .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
