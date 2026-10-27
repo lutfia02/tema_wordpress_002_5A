@@ -107,8 +107,4 @@ Setelah instalasi, lakukan pengujian untuk memastikan tema berjalan dengan baik:
 - Pencarian artikel berfungsi jika template pencarian telah disiapkan.
 - Tampilan website dapat menyesuaikan ukuran layar yang berbeda.
 
- 7. Kesimpulan
 
-SilfiEdu merupakan tema WordPress bertema pendidikan yang dikembangkan untuk menampilkan informasi dan artikel secara terstruktur. Tema ini menggunakan HTML, CSS, PHP, dan fitur WordPress untuk menghasilkan tampilan website yang dinamis dan dapat dikelola melalui Dashboard.
-
-Melalui fitur halaman beranda, blog, detail artikel, kategori, navigasi, dan pencarian yang diterapkan, SilfiEdu diharapkan dapat menjadi sarana publikasi informasi pendidikan yang mudah digunakan. Proyek ini juga menjadi sarana pembelajaran dalam memahami struktur tema WordPress, penggunaan template hierarchy, pengelolaan konten dinamis, dan penggunaan GitHub untuk dokumentasi pengembangan.
